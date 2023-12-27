@@ -1,0 +1,6 @@
+
+
+.sidebarMain{
+  background-color: rgba(30, 30, 45, 1);
+  @apply flex w-1/5 min-w-fit min-h-screen max-h-fit flex gap-10 flex-col p-5;
+}

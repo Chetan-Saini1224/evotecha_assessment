@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Sidebar from "./Components/Sidebar";
+import Navbar from "./Components/Navbar";
+import Services from "./Sections/Services";
+import Sales from "./Sections/Sales";
+import Categories from "./Sections/Categories";
+import NewArrivals from "./Sections/NewArrivals";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex">
+      <Sidebar />
+      <main className=" w-4/5">
+        <Navbar />
+        <div className=" bg-slate-100 min-h-screen h-fit py-6 px-12">
+          <Services />
+          <div className="flex gap-4 py-6">
+            <Categories />
+            <Sales />
+          </div>
+          <div>
+            <NewArrivals />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
